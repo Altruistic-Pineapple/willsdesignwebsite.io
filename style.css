@@ -1,0 +1,155 @@
+:root {
+    --bs-body-font-family: "Lato", Sans-serif;
+    --bs-body-bg: #0f1114
+}
+
+/* Ensure images are responsive */
+.image-responsive {
+    width: 100%;
+    /* Makes the image responsive */
+
+    height: auto;
+    /* Keeps the aspect ratio intact */
+}
+
+.img-fluid {
+    max-width: 100%;
+    /* Ensures the image width does not exceed the container width */
+    height: auto;
+    /* Maintains aspect ratio */
+}
+
+
+
+
+/* Make the row a flex container */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    /* Allows the columns to wrap on smaller screens */
+}
+
+/* Adjust columns layout for larger screens */
+.col {
+    flex: 1 1 48%;
+    /* Distribute columns evenly and add some space between them */
+    margin: 1% 0;
+    /* Add some margin to the columns */
+
+}
+
+
+.navbar-toggler {
+    outline: none;
+    /* Remove any default outline */
+    border: none;
+    /* Remove the border (if there is one) */
+}
+
+.navbar-scroll {
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Adjust opacity and color */
+    transition: background-color 0.3s ease-in-out;
+    /* Smooth transition */
+}
+
+.cover-container {
+    padding: 0 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    /* Make text white for better contrast */
+    text-align: center;
+    z-index: 1;
+    /* Ensure it stays above the image */
+}
+
+main {
+    max-width: 600px;
+    /* Optional: Restrict the width of the content */
+}
+
+.text-center {
+    max-width: 800px;
+    margin: 0 auto;
+    /* Centers the container horizontally */
+    text-align: center;
+    /* Centers the text inside the container */
+}
+
+
+/* Make the gallery container a flexbox and allow wrapping */
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* Allow items to wrap */
+    gap: 16px 16px;
+    /* Add space between items */
+    justify-content: flex-start;
+    /* Align items to the left */
+}
+
+/* Style each gallery item */
+.gallery-item {
+    flex: 1 1 calc(33.33% - 16px);
+    /* Makes each image take up roughly 1/3 of the container */
+    max-width: calc(33.33% - 16px);
+    /* Ensure images do not overflow */
+
+    box-sizing: border-box;
+    /* Ensure padding and border are included in width */
+    margin-bottom: 16;
+}
+
+/* Ensure images are responsive */
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 0px;
+    /* Optional: round the corners */
+    object-fit: cover;
+    /* Maintain aspect ratio and crop if necessary */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Optional: subtle shadow */
+}
+
+/* Responsive design: for smaller screens, adjust layout */
+@media (max-width: 768px) {
+    .gallery-item {
+        flex: 1 1 calc(50% - 16px);
+        /* 2 images per row on medium screens */
+        max-width: calc(50% - 16px);
+    }
+}
+
+@media (max-width: 576px) {
+    .gallery-item {
+        flex: 1 1 100%;
+        /* 1 image per row on small screens */
+        max-width: 100%;
+    }
+}
+
+/* Stack images vertically when screen width is below 500px */
+@media (max-width: 500px) {
+    .row {
+        flex-direction: column;
+        /* Stack images vertically */
+        align-items: center;
+        /* Center the content */
+
+
+    }
+
+
+    .b-example-divider {
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+    }
+
+    /* CSS to enforce left alignment */
