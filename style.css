@@ -151,5 +151,48 @@ main {
         border-width: 1px 0;
         box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
     }
+}
 
-    /* CSS to enforce left alignment */
+/* Add a hover effect for images triggering the modal */
+.clickable-image:hover {
+    cursor: pointer;
+    /* Changes cursor to pointer */
+    filter: brightness(0.8);
+    /* Darkens the image slightly */
+    transition: filter 0.3s ease;
+    /* Smooth transition */
+    border: 2px solid #7c1500;
+    /* Adds a blue border */
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+    /* Adds a subtle shadow */
+}
+
+
+.btn-primary {
+    background-color: #7c1500;
+    /* Replace with your desired color */
+    border-color: #7c1500;
+    /* Replace with your desired color */
+}
+
+.btn-primary:hover {
+    background-color: #5c1000;
+    /* Replace with your hover color */
+    border-color: #5c1000;
+    /* Replace with your hover color */
+}
+
+.btn-primary:active {
+    background-color: #420b00;
+
+    border-color: #420b00;
+
+}
+
+.btn-primary {
+    border-radius: 6px;
+    padding: 4px 24px;
+    font-weight: ;
+}
+
+/* CSS to enforce left alignment */
