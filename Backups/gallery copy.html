@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI Design Gallery</title>
+
+    <!-- Link Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+
+
+    <!-- Optional Bootstrap JS -->
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+
+    <style>
+        /* Set a dark background color for the whole body */
+        body {
+            background-color: #111;
+            font-family: 'Lato', sans-serif;
+        }
+
+        /* Add styling for the gallery container */
+        .container {
+            max-width: 1200px;
+        }
+
+        /* Centered header */
+        h1 {
+            font-family: 'Lato', sans-serif;
+            color: white;
+            font-size: 2.5rem;
+        }
+
+        /* Gallery card setup */
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Image Styling */
+        .card-img-top {
+            object-fit: cover;
+            width: 100%;
+            height: 250px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        /* Hover effect on image */
+        .gallery-item:hover .card-img-top {
+            transform: scale(1.1);
+            /* Slight zoom effect */
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            /* Slight upward movement */
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+            /* Enhance shadow on hover */
+        }
+
+        /* Card body styling */
+        .card-body {
+            background-color: #1a1a1a;
+            color: white;
+            text-align: center;
+        }
+
+        /* Card title and text styling */
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+        }
+
+        .card-text {
+            font-size: 1rem;
+            margin-top: 10px;
+        }
+
+        /* Responsive grid setup */
+        @media (max-width: 992px) {
+            .row-cols-md-2 {
+                grid-template-columns: repeat(2, 1fr);
+                /* Two items per row on medium screens */
+            }
+        }
+
+        @media (max-width: 576px) {
+            .row-cols-md-2 {
+                grid-template-columns: 1fr;
+                /* Single item per row on small screens */
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container py-5">
+        <h1 class="text-center text-white mb-4">UI Design Gallery</h1>
+
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+
+            <div class="col">
+                <div class="card h-100 gallery-item">
+                    <img src="Assets/Gallery/SHudder+page+1.png" class="card-img-top" alt="Project 1">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Shudder Design</h5>
+                        <p class="card-text text-center">A sleek user interface for the Shudder platform.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 gallery-item">
+                    <img src="Assets/Gallery/Vaporwave.png" class="card-img-top" alt="Project 2">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Vaporwave UI</h5>
+                        <p class="card-text text-center">A modern vaporwave-inspired design concept.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 gallery-item">
+                    <img src="Assets/Gallery/home+2.1.png" class="card-img-top" alt="Project 3">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Home Design</h5>
+                        <p class="card-text text-center">A clean and minimalist home page layout.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add more project items here as needed -->
+
+        </div>
+    </div>
+
+</body>
+
+</html>
