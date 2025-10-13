@@ -225,6 +225,19 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
 
+    <script>
+        const modal = document.getElementById('lightboxModal');
+
+        modal.addEventListener('shown.bs.modal', () => {
+            document.body.style.overflow = 'hidden';
+        });
+
+        modal.addEventListener('hidden.bs.modal', () => {
+            document.body.style.overflow = '';
+        });
+    </script>
+
+
     <!-- Lightbox Modal -->
     <div class="modal fade" id="lightboxModal" tabindex="-1" aria-labelledby="lightboxModalLabel" aria-hidden="true"
         data-bs-backdrop="static" data-bs-keyboard="false">

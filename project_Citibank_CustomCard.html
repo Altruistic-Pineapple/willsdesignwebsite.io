@@ -161,21 +161,6 @@
 
 
 
-            <div class="modal fade" id="lightboxModal" tabindex="-1" aria-labelledby="lightboxModalLabel"
-                aria-hidden="true" data-bs-backdrop="false" data-bs-backdrop="static">
-                <div class="modal-dialog modal-xl">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body text-center">
-                            <!-- Full-size Image inside Modal -->
-                            <img id="modalImage" src="" class="img-fluid" alt="Full-size AMC Plus Landing Page">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
 
 
             <!-- Bootstrap JS and Popper.js (make sure these are included in the correct order) -->
@@ -223,6 +208,32 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
 
+    <script>
+        const modal = document.getElementById('lightboxModal');
+
+        modal.addEventListener('shown.bs.modal', () => {
+            document.body.style.overflow = 'hidden';
+        });
+
+        modal.addEventListener('hidden.bs.modal', () => {
+            document.body.style.overflow = '';
+        });
+    </script>
+
+    <div class="modal fade" id="lightboxModal" tabindex="-1" aria-labelledby="lightboxModalLabel" aria-hidden="true"
+        data-bs-backdrop="static">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <!-- Full-size Image inside Modal -->
+                    <img id="modalImage" src="" class="img-fluid" alt="Full-size AMC Plus Landing Page">
+                </div>
+            </div>
+        </div>
+    </div>
 
 </body>
 
